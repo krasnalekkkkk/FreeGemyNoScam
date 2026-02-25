@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legendarna Ekipa</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Orbitron', sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+  color:white;
+  overflow-x:hidden;
+}
+
+header {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: url('https://images.unsplash.com/photo-1612831660238-68b6e5b9dc23?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  position: relative;
+}
+
+header::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+}
+
+header h1 {
+  position: relative;
+  font-size:60px;
+  text-shadow:0 0 20px #ff00ff, 0 0 40px #ff00ff;
+}
+
+header p {
+  position: relative;
+  margin-top:20px;
+  font-size:20px;
+  opacity:0.8;
+}
+
+section {
+  padding:80px 10%;
+  position: relative;
+  z-index:2;
+}
+
+.section-title {
+  text-align:center;
+  font-size:40px;
+  margin-bottom:60px;
+  color:#ff00ff;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.5s;
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow:0 0 40px #ff00ff;
+}
+
+.avatar {
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:20px;
+  border:4px solid #ff00ff;
+  box-shadow:0 0 20px #ff00ff;
+  transition:0.3s;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.card h2 {
+  margin-bottom:15px;
+  color:#ff00ff;
+}
+
+.card p {
+  line-height:1.6;
+  opacity:0.9;
+}
+
+.badge {
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 15px;
+  background:#ff00ff;
+  color:black;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+/* animowane tło z gwiazdkami */
+body::after {
+  content:'';
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: url('https://images.unsplash.com/photo-1520472364664-1f6a9c0fae90?auto=format&fit=crop&w=1500&q=80') repeat;
+  opacity:0.05;
+  z-index:0;
+}
+
+footer {
+  background:#111;
+  padding:25px;
+  text-align:center;
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* Piosenka */
+.song {
+  background:#111;
+  padding:60px 10%;
+  white-space:pre-line;
+  line-height:1.6;
+}
+
+.song h2 {
+  color:#ff00ff;
+  margin-bottom:30px;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🔥 MOJA EKIPA 🔥</h1>
+<p>Najmocniejszy squad w historii</p>
+</header>
+
+<section>
+<h2 class="section-title">👑 Legendarni Członkowie</h2>
+
+<div class="cards">
+  <div class="card">
+    <img src="wodaa.jpg" class="avatar">
+    <h2>Wodaa</h2>
+    <p>Dziabong z Poznania. Ministrant i cichy killer trybu gry.</p>
+    <div class="badge">🔥 Dziabong Mode</div>
+  </div>
+
+  <div class="card">
+    <img src="pross.jpg" class="avatar">
+    <h2>Pross</h2>
+    <p>Minecraft master z Turku. Craft, kopanie i emocje do końca.</p>
+    <div class="badge">🎮 Minecraft Boss</div>
+  </div>
+
+  <div class="card">
+    <img src="orzech.jpg" class="avatar">
+    <h2>Orzech</h2>
+    <p>Spec od ZPŚ i wszystkich aktualizacji.</p>
+    <div class="badge">📢 Update King</div>
+  </div>
+
+  <div class="card">
+    <img src="joas.jpg" class="avatar">
+    <h2>Joaś</h2>
+    <p>Reprezentant Umieszcza.</p>
+    <div class="badge">🌍 Umieszcze Power</div>
+  </div>
+
+  <div class="card">
+    <img src="daria.jpg" class="avatar">
+    <h2>Daria</h2>
+    <p>Reprezentantka Opola.</p>
+    <div class="badge">✨ Opole Energy</div>
+  </div>
+</div>
+</section>
+
+<section class="song">
+<h2>🎵 Hymn Ekipy 🎵</h2>
+1.
+Ta grupa to bardzo dziwne miejsce
+Gdzie Joaś w Umieszczu sra wielce
+Woda walczy o partnerstwa na discordzie
+Orzech daje ciekawostki o nastepnym update
+
+REF.:
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz)
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz)
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz)
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz)
+
+2.
+Woda stalkuje wszystkich i robi screenshoty
+Pross gra w minecrafta - najlepsze klocki
+Jajek ma mózg pięciolatka, zresztą jak Joachim
+Joltek ciągle się poci w Clash Royale
+
+REF.:
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz) [x4]
+
+3.
+Ciastek ciągle wpierdala serdelki (pycha)
+Woda w Poznaniu stoi za Lechem, jebać legię
+Moderatorzy wiki to kurwy kurwy pierdolone
+Mody wiki do kurwy i cwele!
+
+REF.:
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz) [x2]
+Napadamy, napadamy, napadamy, napadamy, napadamy, napadamy!
+
+Outro
+(Ciastek ciągle wpierdala serdelki (pycha)
+Woda w Poznaniu stoi za Lechem, jebać legię
+Moderatorzy wiki to kurwy kurwy pierdolone
+Mody wiki do kurwy i cwele!)
+
+REF.:
+Umiesz, umiesz, umieszcz, umieszcz (umieszcz)
+Umiesz, umiesz, umieszcz, umieszcz
+Napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy, napadamy!!!
+</section>
+
+<footer>
+Ekipa 2026 😎🔥
+</footer>
+
+</body>
+</html>
